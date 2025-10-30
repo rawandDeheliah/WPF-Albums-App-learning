@@ -9,6 +9,7 @@
     <DockPanel>
         <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Background="#EEE" >
             <Button Content="Static Page" Click="StaticPage_Click" Margin="5"/>
+            <Button Content="Posts Page" Click="PostsPage_Click" Margin="5"/>
             <Button Content="Albums Page" Click="AlbumsPage_Click" Margin="5"/>
             <Button Content="ContactUs Page" Click="ContactPage_Click" Margin="5"/>
         </StackPanel>

@@ -26,12 +26,15 @@ namespace WpfApp2
         // Register ViewModels
         services.AddSingleton<MainViewModel>();
         services.AddTransient<StaticPageViewModel>();
+
+        services.AddTransient<PostsListPageViewModel>();
         services.AddTransient<AlbumsPageViewModel>();
 
         // Register Views
         services.AddSingleton<MainWindow>();
         services.AddTransient<StaticPage>();
         services.AddTransient<AlbumsPage>();
+        services.AddTransient<PostsPage>();
         services.AddTransient<ContactUsPage>();
     })
     .Build();

@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using WpfApp2.ModelViews;
+using WpfApp2.Views;
 
 namespace WpfApp2.Views
 {
@@ -49,6 +50,12 @@ namespace WpfApp2.Views
             var contactPage = _serviceProvider.GetRequiredService<ContactUsPage>();
            
             _vm.NavigateTo(contactPage);
+        }
+        public void PostsPage_Click(object sender, RoutedEventArgs e)
+        {
+            var postsPage = _serviceProvider.GetRequiredService<PostsPage>();
+
+            _vm.NavigateTo(postsPage);
         }
     }
 }

@@ -25,6 +25,18 @@ namespace WpfApp2.Services
 
         }
 
+        public async Task<List<Post>> GetPostsAsync()
+        {
+            var response = await _client.GetAsync("https://jsonplaceholder.typicode.com/posts");
+
+            response.EnsureSuccessStatusCode();
+
+            var json = await response.Content.ReadAsStringAsync();
+
+            return JsonSerializer.Deserialize<List<Post>>(json)!;
+
+        }
+
         public async Task<Album> GetAlbumByIdAsync(int id)
         {
             var response = await _client.GetAsync($"https://jsonplaceholder.typicode.com/albums/{id}");
